@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="?android:attr/colorBackground">
 
-    <!-- Header -->
     <LinearLayout
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
@@ -33,14 +32,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My Goals"
+            android:text="@string/my_goals"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_marginStart="12dp" />
     </LinearLayout>
 
-    <!-- Content Area -->
     <FrameLayout
         android:id="@+id/contentFrame"
         android:layout_width="0dp"
@@ -72,25 +70,39 @@
                 android:textSize="64sp" />
 
             <TextView
+                android:id="@+id/tvEmptyTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No goals yet"
+                android:text="@string/no_goals_yet"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginTop="12dp" />
 
             <TextView
+                android:id="@+id/tvEmptyHint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tap the + button to create your first goal"
+                android:text="@string/tap_plus_to_create"
                 android:textSize="14sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:layout_marginTop="8dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddGoalEmpty"
+                style="@style/AppButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_new_goal"
+                android:layout_marginTop="24dp"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconGravity="textStart" />
+
         </LinearLayout>
 
-        <!-- Floating Action Button -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAddGoal"
             android:layout_width="wrap_content"

@@ -43,7 +43,25 @@
     <color name="black_10">#1A000000</color>
     <color name="black_30">#4D000000</color>
     <color name="black_50">#80000000</color>
-    <!-- Success screen -->
+
+    <!-- Success Circle -->
     <color name="successGreen">#4CAF50</color>
     <color name="successGreenLight">#E8F5E9</color>
+
+    <!-- ===== LIGHT MODE HOME BACKGROUND GRADIENT ===== -->
+    <color name="homeBgGradientStart">#F3EEFF</color>
+    <color name="homeBgGradientMid">#FFF6E5</color>
+    <color name="homeBgGradientEnd">#F8F7FC</color>
+
+    <!-- ===== LIGHT MODE DETAIL BACKGROUND GRADIENT ===== -->
+    <color name="detailBgGradientStart">#F3EEFF</color>
+    <color name="detailBgGradientMid">#FCE9F1</color>
+    <color name="detailBgGradientEnd">#F8F7FC</color>
+
+    <!-- ===== Accent Tints for Cards (Light Mode) ===== -->
+    <color name="cardTintPurple">#F3EEFF</color>
+    <color name="cardTintGold">#FFF6E0</color>
+    <color name="cardTintPink">#FCE9F1</color>
+    <color name="cardTintMint">#E6F7F1</color>
+    <color name="cardTintBlue">#E8F1FF</color>
 </resources>

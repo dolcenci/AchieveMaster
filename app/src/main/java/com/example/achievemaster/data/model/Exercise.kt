@@ -5,18 +5,19 @@ import java.io.Serializable
 
 data class Exercise(
     @SerializedName("name")
-    val name: String,
+    val name: String = "",
     @SerializedName("type")
-    val type: String,
+    val type: String = "",
     @SerializedName("muscle")
-    val muscle: String,
-    @SerializedName("equipment")
-    val equipment: String,
+    val muscle: String = "",
+    @SerializedName("equipments")
+    val equipments: List<String>? = null,
     @SerializedName("difficulty")
-    val difficulty: String,
+    val difficulty: String = "",
     @SerializedName("instructions")
-    val instructions: String
+    val instructions: String = ""
 ) : Serializable {
+
     // Map to match our UI expectations
     val category: String
         get() = when (type.lowercase()) {
@@ -31,8 +32,11 @@ data class Exercise(
     val muscles: List<String>
         get() = listOf(muscle)
 
+    val equipment: String
+        get() = if (equipments.isNullOrEmpty()) "Bodyweight" else equipments.joinToString(", ")
+
     val equipmentList: List<String>
-        get() = if (equipment.isNotEmpty()) listOf(equipment) else listOf("Bodyweight")
+        get() = if (equipments.isNullOrEmpty()) listOf("Bodyweight") else equipments
 }
 
 data class ExerciseCategory(

@@ -1,15 +1,18 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.AchieveMaster" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryLight</item>
-        <item name="colorPrimaryVariant">@color/colorPrimary</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <item name="colorSecondary">@color/colorAccent</item>
-        <item name="colorSecondaryVariant">@color/colorAccentDark</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:colorBackground">@color/colorBackgroundDark</item>
-        <item name="colorSurface">@color/colorCardDark</item>
-        <item name="colorOnSurface">@color/colorTextPrimaryDark</item>
-        <item name="android:statusBarColor">@color/colorBackgroundDark</item>
-        <item name="android:windowLightStatusBar">false</item>
-    </style>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode: neutralise the gradient-tinted background colours -->
+    <color name="homeBgGradientStart">#1A1A2E</color>
+    <color name="homeBgGradientMid">#1A1A2E</color>
+    <color name="homeBgGradientEnd">#1A1A2E</color>
+
+    <color name="detailBgGradientStart">#1A1A2E</color>
+    <color name="detailBgGradientMid">#1A1A2E</color>
+    <color name="detailBgGradientEnd">#1A1A2E</color>
+
+    <!-- Dark mode: dark tinted card backgrounds -->
+    <color name="cardTintPurple">#2A2150</color>
+    <color name="cardTintGold">#3A2E15</color>
+    <color name="cardTintPink">#3A1F2E</color>
+    <color name="cardTintMint">#153028</color>
+    <color name="cardTintBlue">#16223D</color>
 </resources>

@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Gradient Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +30,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AchieveMaster"
+                android:text="@string/app_name"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -40,14 +39,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Fitness Journey Starts Here"
+                android:text="@string/your_fitness_journey"
                 android:textSize="14sp"
                 android:textColor="@color/white_70"
-                android:layout_marginTop="4dp" />
+                android:layout_marginTop="4dp"
+                android:gravity="center" />
 
         </LinearLayout>
 
-        <!-- Form Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,28 +62,29 @@
                 android:padding="24dp">
 
                 <TextView
+                    android:id="@+id/tvFormTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Welcome Back"
+                    android:text="@string/welcome_back"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="?android:attr/textColorPrimary" />
 
                 <TextView
+                    android:id="@+id/tvFormSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sign in to continue"
+                    android:text="@string/sign_in_to_continue"
                     android:textSize="14sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="20dp" />
 
-                <!-- Name (only shown in register mode) -->
                 <TextView
                     android:id="@+id/tvNameLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Full Name"
+                    android:text="@string/full_name"
                     android:textSize="13sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:paddingBottom="4dp"
@@ -94,19 +94,19 @@
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your full name"
+                    android:hint="@string/full_name"
                     android:inputType="textPersonName"
                     android:padding="14dp"
                     android:background="@android:drawable/editbox_background"
                     android:layout_marginBottom="12dp"
+                    android:importantForAutofill="no"
                     android:visibility="gone" />
 
-                <!-- Email (only shown in register mode) -->
                 <TextView
                     android:id="@+id/tvEmailLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email"
+                    android:text="@string/email"
                     android:textSize="13sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:paddingBottom="4dp"
@@ -116,18 +116,18 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your email"
+                    android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:padding="14dp"
                     android:background="@android:drawable/editbox_background"
                     android:layout_marginBottom="12dp"
+                    android:importantForAutofill="no"
                     android:visibility="gone" />
 
-                <!-- Username -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Username"
+                    android:text="@string/username"
                     android:textSize="13sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:paddingBottom="4dp" />
@@ -136,17 +136,17 @@
                     android:id="@+id/etUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your username"
+                    android:hint="@string/username"
                     android:inputType="textPersonName"
                     android:padding="14dp"
                     android:background="@android:drawable/editbox_background"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginBottom="12dp"
+                    android:importantForAutofill="no" />
 
-                <!-- Password -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Password"
+                    android:text="@string/password"
                     android:textSize="13sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:paddingBottom="4dp" />
@@ -155,11 +155,12 @@
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your password"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
                     android:padding="14dp"
                     android:background="@android:drawable/editbox_background"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="20dp"
+                    android:importantForAutofill="no" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
@@ -174,7 +175,7 @@
                     style="@style/AppButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Login"
+                    android:text="@string/login"
                     android:layout_marginBottom="12dp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -182,19 +183,37 @@
                     style="@style/AppButtonOutlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Register"
+                    android:text="@string/register"
                     android:layout_marginBottom="12dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_200"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoogleSignIn"
+                    style="@style/AppButtonOutlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in with Google"
+                    android:textColor="@color/colorPrimary"
+                    app:icon="@android:drawable/ic_menu_compass"
+                    app:iconTint="@color/colorPrimary"
+                    app:iconGravity="textStart" />
 
                 <TextView
                     android:id="@+id/tvToggleMode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Don't have an account? Register"
+                    android:text="@string/no_account"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:paddingTop="8dp"
+                    android:paddingTop="16dp"
                     android:clickable="true"
                     android:focusable="true" />
 

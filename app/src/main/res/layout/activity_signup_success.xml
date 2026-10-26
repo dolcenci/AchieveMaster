@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="?android:attr/colorBackground">
 
-    <!-- Gradient Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,7 +15,6 @@
         android:padding="32dp"
         android:gravity="center">
 
-        <!-- Success Circle -->
         <TextView
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -28,18 +26,20 @@
             android:background="@drawable/bg_success_circle" />
 
         <TextView
+            android:id="@+id/tvSuccessTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account Created!"
+            android:text="@string/account_created"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_marginTop="24dp" />
 
         <TextView
+            android:id="@+id/tvSuccessWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to AchieveMaster"
+            android:text="@string/welcome_to_achievemaster"
             android:textSize="16sp"
             android:textColor="@color/white_70"
             android:layout_marginTop="8dp"
@@ -47,7 +47,6 @@
 
     </LinearLayout>
 
-    <!-- Body -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,34 +67,38 @@
                 android:padding="20dp">
 
                 <TextView
+                    android:id="@+id/tvWhatsNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="What's next?"
+                    android:text="@string/whats_next"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="?android:attr/textColorPrimary"
                     android:paddingBottom="12dp" />
 
                 <TextView
+                    android:id="@+id/tvGoalBullet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🎯  Set your fitness goals"
+                    android:text="@string/set_fitness_goals"
                     android:textSize="14sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:paddingBottom="8dp" />
 
                 <TextView
+                    android:id="@+id/tvBrowseBullet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🏋️  Browse the exercise library"
+                    android:text="@string/browse_exercises_bullet"
                     android:textSize="14sp"
                     android:textColor="?android:attr/textColorSecondary"
                     android:paddingBottom="8dp" />
 
                 <TextView
+                    android:id="@+id/tvTrackBullet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="📈  Track your progress daily"
+                    android:text="@string/track_progress_bullet"
                     android:textSize="14sp"
                     android:textColor="?android:attr/textColorSecondary" />
 
@@ -107,7 +110,7 @@
             style="@style/AppButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Continue to Login" />
+            android:text="@string/continue_to_login" />
 
     </LinearLayout>
 

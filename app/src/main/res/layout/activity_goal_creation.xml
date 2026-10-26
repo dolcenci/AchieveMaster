@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="?android:attr/colorBackground">
 
-    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Create New Goal"
+            android:text="@string/create_new_goal"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -49,9 +48,10 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvTitleLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Goal Title"
+                android:text="@string/goal_title"
                 android:textSize="13sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:paddingBottom="6dp" />
@@ -60,7 +60,7 @@
                 android:id="@+id/etGoalTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="e.g., Complete 20 chest workouts"
+                android:hint="@string/goal_title"
                 android:padding="14dp"
                 android:background="@android:drawable/editbox_background"
                 android:layout_marginBottom="16dp"
@@ -68,9 +68,10 @@
                 android:inputType="text" />
 
             <TextView
+                android:id="@+id/tvDescriptionLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description (optional)"
+                android:text="@string/goal_description_optional"
                 android:textSize="13sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:paddingBottom="6dp" />
@@ -79,7 +80,7 @@
                 android:id="@+id/etGoalDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Describe your goal"
+                android:hint="@string/goal_description_optional"
                 android:padding="14dp"
                 android:minLines="3"
                 android:gravity="top"
@@ -89,9 +90,10 @@
                 android:inputType="textMultiLine" />
 
             <TextView
+                android:id="@+id/tvMuscleLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Target Muscle Group"
+                android:text="@string/target_muscle_group"
                 android:textSize="13sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:paddingBottom="6dp" />
@@ -104,9 +106,10 @@
                 android:layout_marginBottom="16dp" />
 
             <TextView
+                android:id="@+id/tvTargetLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Number of Exercises to Complete"
+                android:text="@string/target_exercises_count"
                 android:textSize="13sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:paddingBottom="6dp" />
@@ -127,14 +130,14 @@
                 style="@style/AppButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Save Goal" />
+                android:text="@string/save_goal" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnViewGoals"
                 style="@style/AppButtonOutlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View My Goals"
+                android:text="@string/view_my_goals"
                 android:layout_marginTop="12dp" />
 
         </LinearLayout>

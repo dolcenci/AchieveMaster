@@ -1,3 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AchieveMaster</string>
+
+    <!-- Language names -->
+    <string name="language_english">English</string>
+    <string name="language_zulu">isiZulu</string>
+    <string name="language_xhosa">isiXhosa</string>
+    <string name="language_afrikaans">Afrikaans</string>
+
+    <!-- Login / Register -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="username">Username</string>
+    <string name="full_name">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+    <string name="have_account">Already have an account? Login</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="create_account">Create Account</string>
+    <string name="your_fitness_journey">Your Fitness Journey Starts Here</string>
+
+    <!-- Main / Home -->
+    <string name="welcome_user">Welcome</string>
+    <string name="explore_exercises">🏋️ Explore Exercises</string>
+    <string name="discover">Discover</string>
+    <string name="search_exercises_hint">Search exercises…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_strength">💪 Strength</string>
+    <string name="filter_cardio">🏃 Cardio</string>
+    <string name="filter_flexibility">🧘 Flexibility</string>
+    <string name="my_goals">🎯 My Goals</string>
+    <string name="settings">⚙️ Settings</string>
+    <string name="logout">🚪 Logout</string>
+
+    <!-- Exercise Detail -->
+    <string name="difficulty_level">Difficulty Level</string>
+    <string name="muscles_worked">Muscles Worked</string>
+    <string name="equipment_needed">Equipment Needed</string>
+    <string name="instructions">Instructions</string>
+    <string name="muscle_prefix">Muscle:</string>
+    <string name="difficulty_prefix">Difficulty:</string>
+    <string name="equipment_prefix">Equipment:</string>
+    <string name="category_prefix">Category:</string>
+
+    <!-- Goals -->
+    <string name="create_new_goal">Create New Goal</string>
+    <string name="goal_title">Goal Title</string>
+    <string name="goal_description_optional">Description (optional)</string>
+    <string name="target_muscle_group">Target Muscle Group</string>
+    <string name="target_exercises_count">Number of Exercises to Complete</string>
+    <string name="save_goal">Save Goal</string>
+    <string name="view_my_goals">View My Goals</string>
+    <string name="no_goals_yet">No goals yet</string>
+    <string name="tap_plus_to_create">Tap the + button to create your first goal</string>
+
+    <!-- Settings -->
+    <string name="settings_header">⚙️ Settings</string>
+    <string name="customize_experience">Customize your experience</string>
+    <string name="preferences">PREFERENCES</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="notifications_description">Receive workout reminders</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode_description">Switch to dark theme</string>
+    <string name="language">Language</string>
+    <string name="language_description">Choose your preferred language</string>
+    <string name="fitness_profile">FITNESS PROFILE</string>
+    <string name="fitness_goal">Fitness Goal</string>
+    <string name="workout_frequency">Workout Frequency</string>
+    <string name="about">ABOUT</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="share_app">Share App</string>
+    <string name="about_achiever">About AchieveMaster</string>
+    <string name="save_settings">💾 Save Settings</string>
+    <string name="reset">🔄 Reset</string>
+    <string name="default_web_client_id" translatable="false">184819185945-o85ojgmufa331j0heamb7etdrkrende1.apps.googleusercontent.com</string>
+    <!-- Success -->
+    <string name="account_created">Account Created!</string>
+    <string name="welcome_to_achievemaster">Welcome to AchieveMaster</string>
+    <string name="whats_next">What\'s next?</string>
+    <string name="continue_to_login">Continue to Login</string>
+    <string name="set_fitness_goals">🎯  Set your fitness goals</string>
+    <string name="browse_exercises_bullet">🏋️  Browse the exercise library</string>
+    <string name="track_progress_bullet">📈  Track your progress daily</string>
+
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="delete">Delete</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
 </resources>

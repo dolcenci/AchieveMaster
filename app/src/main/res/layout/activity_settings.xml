@@ -25,7 +25,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⚙️ Settings"
+                android:text="@string/settings_header"
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/white" />
@@ -33,14 +33,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Customize your experience"
+                android:text="@string/customize_experience"
                 android:textSize="14sp"
                 android:textColor="@color/white_70"
                 android:layout_marginTop="4dp" />
 
         </LinearLayout>
 
-        <!-- Content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,11 +62,16 @@
                     android:padding="8dp">
 
                     <TextView
-                        style="@style/SectionHeader"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="PREFERENCES"
-                        android:paddingStart="16dp" />
+                        android:text="@string/preferences"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:letterSpacing="0.15"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp" />
 
                     <!-- Notifications Toggle -->
                     <LinearLayout
@@ -93,14 +97,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Enable Notifications"
+                                android:text="@string/enable_notifications"
                                 android:textSize="16sp"
                                 android:textColor="?android:attr/textColorPrimary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Receive workout reminders"
+                                android:text="@string/notifications_description"
                                 android:textSize="12sp"
                                 android:textColor="?android:attr/textColorSecondary" />
                         </LinearLayout>
@@ -141,14 +145,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Dark Mode"
+                                android:text="@string/dark_mode"
                                 android:textSize="16sp"
                                 android:textColor="?android:attr/textColorPrimary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Switch to dark theme"
+                                android:text="@string/dark_mode_description"
                                 android:textSize="12sp"
                                 android:textColor="?android:attr/textColorSecondary" />
                         </LinearLayout>
@@ -157,6 +161,60 @@
                             android:id="@+id/switchDarkMode"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_200"
+                        android:layout_marginStart="56dp" />
+
+                    <!-- Language -->
+                    <LinearLayout
+                        android:id="@+id/layoutLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_sort_by_size"
+                            app:tint="@color/colorPrimary" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/language"
+                                android:textSize="16sp"
+                                android:textColor="?android:attr/textColorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvLanguageValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/language_english"
+                                android:textSize="12sp"
+                                android:textColor="?android:attr/textColorSecondary" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="?android:attr/textColorSecondary" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -177,11 +235,16 @@
                     android:padding="8dp">
 
                     <TextView
-                        style="@style/SectionHeader"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="FITNESS PROFILE"
-                        android:paddingStart="16dp" />
+                        android:text="@string/fitness_profile"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:letterSpacing="0.15"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -192,7 +255,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Fitness Goal"
+                            android:text="@string/fitness_goal"
                             android:textSize="13sp"
                             android:textColor="?android:attr/textColorSecondary"
                             android:paddingBottom="6dp" />
@@ -211,7 +274,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Workout Frequency"
+                            android:text="@string/workout_frequency"
                             android:textSize="13sp"
                             android:textColor="?android:attr/textColorSecondary"
                             android:paddingBottom="6dp" />
@@ -245,11 +308,16 @@
                     android:padding="8dp">
 
                     <TextView
-                        style="@style/SectionHeader"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ABOUT"
-                        android:paddingStart="16dp" />
+                        android:text="@string/about"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:letterSpacing="0.15"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp" />
 
                     <!-- Privacy Policy -->
                     <LinearLayout
@@ -273,7 +341,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Privacy Policy"
+                            android:text="@string/privacy_policy"
                             android:textSize="16sp"
                             android:textColor="?android:attr/textColorPrimary"
                             android:layout_marginStart="16dp" />
@@ -313,7 +381,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Share App"
+                            android:text="@string/share_app"
                             android:textSize="16sp"
                             android:textColor="?android:attr/textColorPrimary"
                             android:layout_marginStart="16dp" />
@@ -353,7 +421,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="About AchieveMaster"
+                            android:text="@string/about_achiever"
                             android:textSize="16sp"
                             android:textColor="?android:attr/textColorPrimary"
                             android:layout_marginStart="16dp" />
@@ -380,7 +448,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="💾 Save Settings"
+                    android:text="@string/save_settings"
                     android:layout_marginEnd="8dp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -389,7 +457,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="🔄 Reset"
+                    android:text="@string/reset"
                     app:backgroundTint="@color/colorWarning" />
             </LinearLayout>
 

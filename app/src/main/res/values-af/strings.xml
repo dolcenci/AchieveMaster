@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AchieveMaster</string>
+
+    <!-- Language names -->
+    <string name="language_english">English</string>
+    <string name="language_zulu">isiZulu</string>
+    <string name="language_xhosa">isiXhosa</string>
+    <string name="language_afrikaans">Afrikaans</string>
+
+    <!-- Login / Register -->
+    <string name="login">Teken in</string>
+    <string name="register">Registreer</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wagwoord</string>
+    <string name="confirm_password">Bevestig wagwoord</string>
+    <string name="username">Gebruikersnaam</string>
+    <string name="full_name">Volle naam</string>
+    <string name="forgot_password">Wagwoord vergeet?</string>
+    <string name="no_account">Het jy nie \'n rekening nie? Registreer</string>
+    <string name="have_account">Het jy reeds \'n rekening? Teken in</string>
+    <string name="welcome_back">Welkom terug</string>
+    <string name="sign_in_to_continue">Teken in om voort te gaan</string>
+    <string name="create_account">Skep rekening</string>
+    <string name="your_fitness_journey">Jou fiksheidsreis begin hier</string>
+
+    <!-- Main / Home -->
+    <string name="welcome_user">Welkom</string>
+    <string name="explore_exercises">🏋️ Verken oefeninge</string>
+    <string name="discover">Ontdek</string>
+    <string name="search_exercises_hint">Soek oefeninge…</string>
+    <string name="filter_all">Alles</string>
+    <string name="filter_strength">💪 Krag</string>
+    <string name="filter_cardio">🏃 Kardio</string>
+    <string name="filter_flexibility">🧘 Buigsaamheid</string>
+    <string name="my_goals">🎯 My doelwitte</string>
+    <string name="settings">⚙️ Instellings</string>
+    <string name="logout">🚪 Teken uit</string>
+
+    <!-- Exercise Detail -->
+    <string name="difficulty_level">Moeilikheidsvlak</string>
+    <string name="muscles_worked">Spiergroepe</string>
+    <string name="equipment_needed">Toerusting benodig</string>
+    <string name="instructions">Instruksies</string>
+    <string name="muscle_prefix">Spier:</string>
+    <string name="difficulty_prefix">Moeilikheid:</string>
+    <string name="equipment_prefix">Toerusting:</string>
+    <string name="category_prefix">Kategorie:</string>
+
+    <!-- Goals -->
+    <string name="create_new_goal">Skep nuwe doelwit</string>
+    <string name="goal_title">Doelwit titel</string>
+    <string name="goal_description_optional">Beskrywing (opsioneel)</string>
+    <string name="target_muscle_group">Teiken spiergroep</string>
+    <string name="target_exercises_count">Aantal oefeninge om te voltooi</string>
+    <string name="save_goal">Stoor doelwit</string>
+    <string name="view_my_goals">Sien my doelwitte</string>
+    <string name="no_goals_yet">Nog geen doelwitte nie</string>
+    <string name="tap_plus_to_create">Tik die + knoppie om jou eerste doelwit te skep</string>
+
+    <!-- Settings -->
+    <string name="settings_header">⚙️ Instellings</string>
+    <string name="customize_experience">Pas jou ervaring aan</string>
+    <string name="preferences">VOORKEURE</string>
+    <string name="enable_notifications">Aktiveer kennisgewings</string>
+    <string name="notifications_description">Ontvang oefenherinneringe</string>
+    <string name="dark_mode">Donker modus</string>
+    <string name="dark_mode_description">Skakel oor na donker tema</string>
+    <string name="language">Taal</string>
+    <string name="language_description">Kies jou voorkeurtaal</string>
+    <string name="fitness_profile">FIKSHEDSPROFIEL</string>
+    <string name="fitness_goal">Fiksheidsdoelwit</string>
+    <string name="workout_frequency">Oefenfrekwns</string>
+    <string name="about">OOR</string>
+    <string name="privacy_policy">Privaatheidsbeleid</string>
+    <string name="share_app">Deel app</string>
+    <string name="about_achiever">Oor AchieveMaster</string>
+    <string name="save_settings">💾 Stoor instellings</string>
+    <string name="reset">🔄 Herstel</string>
+
+    <!-- Success -->
+    <string name="account_created">Rekening geskep!</string>
+    <string name="welcome_to_achievemaster">Welkom by AchieveMaster</string>
+    <string name="whats_next">Wat nou?</string>
+    <string name="continue_to_login">Gaan voort na intekening</string>
+    <string name="set_fitness_goals">🎯  Stel jou fiksheidsdoelwitte</string>
+    <string name="browse_exercises_bullet">🏋️  Blaai deur die oefeningbiblioteek</string>
+    <string name="track_progress_bullet">📈  Volg jou vordering daagliks</string>
+
+    <!-- Common -->
+    <string name="save">Stoor</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="ok">OK</string>
+    <string name="delete">Verwyder</string>
+    <string name="error">Fout</string>
+    <string name="success">Sukses</string>
+</resources>

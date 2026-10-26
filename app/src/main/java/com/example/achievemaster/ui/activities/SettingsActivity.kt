@@ -1,16 +1,20 @@
 package com.example.achievemaster.ui.activities
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Switch
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.achievemaster.R
+import com.example.achievemaster.utils.LocaleHelper
 import com.example.achievemaster.utils.SharedPrefsHelper
 
 class SettingsActivity : AppCompatActivity() {
@@ -22,17 +26,22 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var etWorkoutFrequency: EditText
     private lateinit var btnSave: Button
     private lateinit var btnReset: Button
+    private lateinit var layoutLanguage: LinearLayout
     private lateinit var layoutPrivacyPolicy: LinearLayout
     private lateinit var layoutShareApp: LinearLayout
     private lateinit var layoutAbout: LinearLayout
+    private lateinit var tvLanguageValue: TextView
 
     companion object {
         const val KEY_DARK_MODE = "dark_mode"
         const val PREFS_NAME = "settings"
     }
 
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Apply saved dark-mode preference BEFORE setContentView
         val prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         val darkMode = prefs.getBoolean(KEY_DARK_MODE, false)
         if (darkMode) {
@@ -46,16 +55,17 @@ class SettingsActivity : AppCompatActivity() {
 
         sharedPrefs = SharedPrefsHelper(this)
 
-        // Wire up views
         switchNotifications = findViewById(R.id.switchNotifications)
         switchDarkMode = findViewById(R.id.switchDarkMode)
         etFitnessGoal = findViewById(R.id.etFitnessGoal)
         etWorkoutFrequency = findViewById(R.id.etWorkoutFrequency)
         btnSave = findViewById(R.id.btnSave)
         btnReset = findViewById(R.id.btnReset)
+        layoutLanguage = findViewById(R.id.layoutLanguage)
         layoutPrivacyPolicy = findViewById(R.id.layoutPrivacyPolicy)
         layoutShareApp = findViewById(R.id.layoutShareApp)
         layoutAbout = findViewById(R.id.layoutAbout)
+        tvLanguageValue = findViewById(R.id.tvLanguageValue)
 
         loadSettings()
         setupListeners()
@@ -67,15 +77,14 @@ class SettingsActivity : AppCompatActivity() {
             .getBoolean(KEY_DARK_MODE, false)
         etFitnessGoal.setText(sharedPrefs.getFitnessGoal())
         etWorkoutFrequency.setText(sharedPrefs.getWorkoutFrequency())
+        tvLanguageValue.text = getLanguageDisplayName(LocaleHelper.getSavedLanguage(this))
     }
 
     private fun setupListeners() {
-        // Notifications toggle saves immediately
         switchNotifications.setOnCheckedChangeListener { _, isChecked ->
             sharedPrefs.saveSetting("notifications_enabled", isChecked)
         }
 
-        // Dark mode toggle applies immediately
         switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
             getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
                 .edit()
@@ -84,22 +93,24 @@ class SettingsActivity : AppCompatActivity() {
 
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                Toast.makeText(this, "Dark mode enabled", Toast.LENGTH_SHORT).show()
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                Toast.makeText(this, "Light mode enabled", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Save button
+        layoutLanguage.setOnClickListener { showLanguageDialog() }
+
+        layoutPrivacyPolicy.setOnClickListener {
+            startActivity(Intent(this, PrivacyPolicyActivity::class.java))
+        }
+
         btnSave.setOnClickListener {
             sharedPrefs.saveSetting("notifications_enabled", switchNotifications.isChecked)
             sharedPrefs.saveSetting("fitness_goal", etFitnessGoal.text.toString())
             sharedPrefs.saveSetting("workout_frequency", etWorkoutFrequency.text.toString())
-            Toast.makeText(this, "✅ Settings saved!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.save) + " ✔", Toast.LENGTH_SHORT).show()
         }
 
-        // Reset button
         btnReset.setOnClickListener {
             switchNotifications.isChecked = true
             etFitnessGoal.setText("General Fitness")
@@ -107,40 +118,62 @@ class SettingsActivity : AppCompatActivity() {
             sharedPrefs.saveSetting("notifications_enabled", true)
             sharedPrefs.saveSetting("fitness_goal", "General Fitness")
             sharedPrefs.saveSetting("workout_frequency", "3 times per week")
-            Toast.makeText(this, "Settings reset to default", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.reset, Toast.LENGTH_SHORT).show()
         }
 
-        // Privacy Policy
-        layoutPrivacyPolicy.setOnClickListener {
-            startActivity(Intent(this, PrivacyPolicyActivity::class.java))
-        }
-
-        // Share App
         layoutShareApp.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_SUBJECT, "Check out AchieveMaster!")
+                putExtra(Intent.EXTRA_SUBJECT, "AchieveMaster")
                 putExtra(
                     Intent.EXTRA_TEXT,
                     "I'm using AchieveMaster to track my fitness goals. Download it now!"
                 )
             }
-            startActivity(Intent.createChooser(shareIntent, "Share AchieveMaster"))
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.share_app)))
         }
 
-        // About
         layoutAbout.setOnClickListener {
             AlertDialog.Builder(this)
-                .setTitle("About AchieveMaster")
+                .setTitle(R.string.about_achiever)
                 .setMessage(
                     "AchieveMaster v1.0.0\n\n" +
-                            "Your personal fitness companion. " +
-                            "Track exercises, set goals, and achieve more every day.\n\n" +
+                            "Your personal fitness companion. Track exercises, set goals, and achieve more every day.\n\n" +
                             "Built with Kotlin and the API Ninjas Exercises API.\n\n" +
                             "© 2024 AchieveMaster"
                 )
-                .setPositiveButton("OK", null)
+                .setPositiveButton(R.string.ok, null)
                 .show()
         }
+    }
+
+    private fun showLanguageDialog() {
+        val codes = arrayOf("en", "zu", "xh", "af")
+        val names = arrayOf(
+            getString(R.string.language_english),
+            getString(R.string.language_zulu),
+            getString(R.string.language_xhosa),
+            getString(R.string.language_afrikaans)
+        )
+        val currentCode = LocaleHelper.getSavedLanguage(this)
+        val currentIndex = codes.indexOf(currentCode).coerceAtLeast(0)
+
+        AlertDialog.Builder(this)
+            .setTitle(R.string.language)
+            .setSingleChoiceItems(names, currentIndex) { dialog, which ->
+                val selectedCode = codes[which]
+                LocaleHelper.saveLanguage(this, selectedCode)
+                dialog.dismiss()
+                recreate()
+            }
+            .setNegativeButton(R.string.cancel, null)
+            .show()
+    }
+
+    private fun getLanguageDisplayName(code: String): String = when (code) {
+        "zu" -> getString(R.string.language_zulu)
+        "xh" -> getString(R.string.language_xhosa)
+        "af" -> getString(R.string.language_afrikaans)
+        else -> getString(R.string.language_english)
     }
 }

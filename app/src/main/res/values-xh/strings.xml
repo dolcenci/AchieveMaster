@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AchieveMaster</string>
+
+    <!-- Language names -->
+    <string name="language_english">English</string>
+    <string name="language_zulu">isiZulu</string>
+    <string name="language_xhosa">isiXhosa</string>
+    <string name="language_afrikaans">Afrikaans</string>
+
+    <!-- Login / Register -->
+    <string name="login">Ngena</string>
+    <string name="register">Bhalisa</string>
+    <string name="email">I-imeyile</string>
+    <string name="password">Igama lokugqitha</string>
+    <string name="confirm_password">Qinisekisa igama lokugqitha</string>
+    <string name="username">Igama lomsebenzisi</string>
+    <string name="full_name">Igama elipheleleyo</string>
+    <string name="forgot_password">Ulibale igama lokugqitha?</string>
+    <string name="no_account">Awunayo i-akhawunti? Bhalisa</string>
+    <string name="have_account">Sele unayo i-akhawunti? Ngena</string>
+    <string name="welcome_back">Wamkelekile kwakhona</string>
+    <string name="sign_in_to_continue">Ngena ukuqhubeka</string>
+    <string name="create_account">Yenza i-akhawunti</string>
+    <string name="your_fitness_journey">Uhambo lwakho lokuzilolonga luqala apha</string>
+
+    <!-- Main / Home -->
+    <string name="welcome_user">Wamkelekile</string>
+    <string name="explore_exercises">🏋️ Phanda imithambo</string>
+    <string name="discover">Fumana</string>
+    <string name="search_exercises_hint">Khangela imithambo…</string>
+    <string name="filter_all">Konke</string>
+    <string name="filter_strength">💪 Amandla</string>
+    <string name="filter_cardio">🏃 I-cardio</string>
+    <string name="filter_flexibility">🧘 Ukuguquguquka</string>
+    <string name="my_goals">🎯 Iinjongo zam</string>
+    <string name="settings">⚙️ Iisetingi</string>
+    <string name="logout">🚪 Phuma</string>
+
+    <!-- Exercise Detail -->
+    <string name="difficulty_level">Inqanaba lobunzima</string>
+    <string name="muscles_worked">Imisipha esetyenzisiweyo</string>
+    <string name="equipment_needed">Izixhobo ezifunekayo</string>
+    <string name="instructions">Imiyalelo</string>
+    <string name="muscle_prefix">Umsebenzi:</string>
+    <string name="difficulty_prefix">Ubunzima:</string>
+    <string name="equipment_prefix">Izixhobo:</string>
+    <string name="category_prefix">Udidi:</string>
+
+    <!-- Goals -->
+    <string name="create_new_goal">Yenza injongo entsha</string>
+    <string name="goal_title">Isihloko senjongo</string>
+    <string name="goal_description_optional">Inkcazo (ngokuzikhethela)</string>
+    <string name="target_muscle_group">Iqela lemisipha</string>
+    <string name="target_exercises_count">Inani lemithambo ekufuneka uyigqibe</string>
+    <string name="save_goal">Gcina injongo</string>
+    <string name="view_my_goals">Jonga iinjongo zam</string>
+    <string name="no_goals_yet">Akukho njongo okwangoku</string>
+    <string name="tap_plus_to_create">Cofa u-+ ukwenza injongo yakho yokuqala</string>
+
+    <!-- Settings -->
+    <string name="settings_header">⚙️ Iisetingi</string>
+    <string name="customize_experience">Lungisa amava akho</string>
+    <string name="preferences">IZINTO OZIKHETHAYO</string>
+    <string name="enable_notifications">Vumela izaziso</string>
+    <string name="notifications_description">Fumana izikhumbuzo zokuzilolonga</string>
+    <string name="dark_mode">Imodi emnyama</string>
+    <string name="dark_mode_description">Tshintshela kwimodi emnyama</string>
+    <string name="language">Ulwimi</string>
+    <string name="language_description">Khetha ulwimi oluthandayo</string>
+    <string name="fitness_profile">IPROFAYILE YOKUZILOLONGA</string>
+    <string name="fitness_goal">Injongo yokuzilolonga</string>
+    <string name="workout_frequency">Ukuphindaphinda kokuzilolonga</string>
+    <string name="about">MALUNGA</string>
+    <string name="privacy_policy">Umgaqo-nkqubo wabucala</string>
+    <string name="share_app">Yabelana nge-app</string>
+    <string name="about_achiever">Malunga ne-AchieveMaster</string>
+    <string name="save_settings">💾 Gcina iisetingi</string>
+    <string name="reset">🔄 Seta kwakhona</string>
+
+    <!-- Success -->
+    <string name="account_created">I-akhawunti yenziwe!</string>
+    <string name="welcome_to_achievemaster">Wamkelekile ku-AchieveMaster</string>
+    <string name="whats_next">Yintoni elandelayo?</string>
+    <string name="continue_to_login">Qhubeka ukuze ungene</string>
+    <string name="set_fitness_goals">🎯  Beka iinjongo zakho zokuzilolonga</string>
+    <string name="browse_exercises_bullet">🏋️  Phanda ilayibrari yemithambo</string>
+    <string name="track_progress_bullet">📈  Landela inkqubela phambili yakho</string>
+
+    <!-- Common -->
+    <string name="save">Gcina</string>
+    <string name="cancel">Rhoxisa</string>
+    <string name="ok">Kulungile</string>
+    <string name="delete">Cima</string>
+    <string name="error">Impazamo</string>
+    <string name="success">Impumelelo</string>
+</resources>

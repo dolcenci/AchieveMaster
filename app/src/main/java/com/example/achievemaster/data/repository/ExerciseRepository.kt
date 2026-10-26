@@ -13,18 +13,21 @@ class ExerciseRepository {
     suspend fun getExercises(): List<Exercise> {
         return withContext(Dispatchers.IO) {
             try {
-                // Get exercises for different muscle groups
                 val allExercises = mutableListOf<Exercise>()
 
-                // Try to get exercises for common muscle groups
-                val muscleGroups = listOf("chest", "back", "legs", "shoulders", "biceps", "triceps", "abs", "cardio")
+                // Valid muscle names per API Ninjas documentation
+                val muscleGroups = listOf(
+                    "chest", "lats", "middle_back", "lower_back",
+                    "quadriceps", "hamstrings", "calves", "glutes",
+                    "shoulders", "biceps", "triceps", "forearms",
+                    "abdominals", "traps", "neck"
+                )
 
                 for (muscle in muscleGroups) {
                     try {
                         val exercises = apiService.getExercises(muscle = muscle)
                         allExercises.addAll(exercises)
                     } catch (e: Exception) {
-                        // Continue to next muscle group if one fails
                         continue
                     }
                 }
